@@ -78,9 +78,6 @@ Relationships
 * Working with related records
 * Querying with joins
 * Table aliases
-
-**TODO** below here
-
 * Subqueries and mapping to entities
 * exists, has, any
 * Relationship operators
