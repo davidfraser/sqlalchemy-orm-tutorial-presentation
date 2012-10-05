@@ -1,13 +1,14 @@
 Introduction to SQLAlchemy
 +++++++++++++++++++++++++++++
 
-* How to use SQLAlchemy
-* Primarily as an ORM layer
-* But also explaining the other parts
+.. image:: sqlalchemy-logo-large.png
 
 Introduction
 ============
 
+* How to use SQLAlchemy
+* Primarily as an ORM layer
+* But also explaining the other parts
 * Relational databases
 * Python DBAPI
 * ORM layers
@@ -16,34 +17,24 @@ Philosophy of SQLalchemy
 ========================
 
 * Abstraction (leaky)
-* Database Independence
 * But Hand-Coded
+* Database Independence (SQL dialects, data types)
+* Logical set of classes that relate to database constructs
 
-SQLalchemy core
-===============
+SQLalchemy concept map
+======================
 
-* Engines and connections
-* Data Types
-* Schema Definition
-* SQL expressions
-
-Engines and connections
-=======================
-
-* What a database URL is
-* Step 1 - connecting to SQLalchemy and running a simple statement
-
-Data Types
-==========
-
-Schema Definition
-=================
-
-SQL expressions
-===============
+* Engine <=> Database
+* Session <=> Database Connection
+* (Data Type) <=> Column Type
+* Schemas: Table, Column, Index, ForeignKey, Sequence...
+* SQL statements/xepressions: Select, Insert, Update, Join ...
+* And so on...
 
 ORM Tutorial (using ``declarative``)
 ====================================
+
+Working through the standard tutorial from the documentation. Code on github, if you want to follow along
 
 * Basics
 * Querying
@@ -55,11 +46,10 @@ ORM Tutorial (using ``declarative``)
 Basics
 ======
 
-* will actually work through the standard tutorial from the documentation
-* Step 2 - importing declarative and setting up a table
+* Importing declarative and setting up a table
 * Creating records, adding and simple querying
-* record statuses, flushing and committing
-* rollback
+* Record statuses, flushing and committing
+* Rollback
 
 Querying
 ========
@@ -86,7 +76,7 @@ The importance of being eager
 =============================
 
 * Eager loading
-* joined load
+* Joined load
 
 Deleting
 ========
@@ -99,8 +89,14 @@ Bonus Round
 
 * Many to many relationships
 
-Sessions and Concurrency
+Questions
+=========
+
+* What is your name?
+* What is your favourite colour?
+
+Other interesting topics
 ========================
 
-* some tips
-
+* Concurrent connections and avoiding deadlocks
+* You can replace anything on any layer
